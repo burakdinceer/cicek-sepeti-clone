@@ -1,20 +1,16 @@
-import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+
 import Header from '../../components/Header/Header'
-import { fetchData } from '../../redux/dataSlice'
+import NavText from '../../components/Header/NavText'
+import Main from '../../components/Main/Main'
 
-  
-   
 const Home = () => {
-    const dispatch = useDispatch()  
+  
 
-    useEffect(() => {
-         dispatch(fetchData())   
-    },[])
-   
   return (
     <div>
         <Header/>
+        <NavText/>
+        <Main/>
     </div>
   )
 }
