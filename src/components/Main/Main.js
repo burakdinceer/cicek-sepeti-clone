@@ -1,11 +1,11 @@
 import React from 'react'
-import Category from './Category'
+import Categories from './Categories'
 import ProductList from './ProductList'
 
 const Main = () => {
   return (
     <div>
-        <Category/>
+        <Categories/>
         <ProductList/>
     </div>
   )

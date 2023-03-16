@@ -3,7 +3,7 @@ import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 import {faBagShopping} from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { filterData } from '../../redux/dataSlice'
+import { getData } from '../../redux/dataSlice'
 
 const Header = () => {
 
@@ -13,7 +13,7 @@ const Header = () => {
     const veri = e.target.value
    if(veri.length>2){
     const inputData = product.filter(item => item.name.toLocaleLowerCase().includes(veri.toLocaleLowerCase()))
-    dispatch(filterData(inputData))
+    dispatch(getData(inputData))
    }
   }
 
@@ -22,8 +22,8 @@ const Header = () => {
         <div className=' basis-1/5 ml-10  '>
             <img className='w-36 h-10 object-contain ' alt='images' src='./ciceklogo.png'/></div>
         <div className=' basis-3/5 flex justify-center items-center relative '>
-       <FontAwesomeIcon className='absolute top-3 left-1 text-gray-600' icon={faMagnifyingGlass}></FontAwesomeIcon>
-            <input onChange={(e)=>handlePage(e)} className='w-full bg-gray-100 h-9 rounded-2xl border-y border-x border-gray-200 placeholder:text-gray-600' placeholder='      Ürün Adı'/>
+       <FontAwesomeIcon className='absolute top-3 left-1  text-gray-600' icon={faMagnifyingGlass}></FontAwesomeIcon>
+            <input onChange={(e)=>handlePage(e)} className='w-full bg-gray-100 h-9 rounded-2xl border-y border-x border-gray-200 text-center placeholder:text-gray-600' placeholder='      Ürün Adı'/>
             <button className='absolute right-2 bg-green-500 text-white rounded-xl w-11'>Ara</button>
         </div>
         <button>
