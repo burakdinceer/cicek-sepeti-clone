@@ -10,9 +10,9 @@ const Category = () => {
         </div>
         <div className='ml-12 mt-2'>
            <div className='grid grid-cols-7 '>
-           <button className='w-36 h-10 border-y border-x border-gray-300 rounded-lg font-bold text-gray-400 text-sm  hover:bg-blue-700 hover:text-white mb-5'>Tüm Kategoriler</button>
-            <button className='w-36 h-10 border-y border-x border-gray-300 rounded-lg font-bold text-gray-400 text-sm hover:bg-blue-700 hover:text-white'>Elektronik</button>
-            <button className='w-36 h-10 border-y border-x border-gray-300 rounded-lg font-bold text-gray-400 text-sm hover:bg-blue-700 hover:text-white'>Ev ve Yaşam</button>
+           <button   className='w-36 h-10 border-y border-x border-gray-300 rounded-lg font-bold text-gray-400 text-sm  hover:bg-blue-700 hover:text-white mb-5'>Tüm Kategoriler</button>
+            <button  className='w-36 h-10 border-y border-x border-gray-300 rounded-lg font-bold text-gray-400 text-sm hover:bg-blue-700 hover:text-white'>Elektronik</button>
+            <button disabled className='w-36 h-10 border-y border-x border-gray-300 rounded-lg font-bold text-gray-400 text-sm hover:bg-blue-700 hover:text-white'>Ev ve Yaşam</button>
             <button className='w-36 h-10 border-y border-x border-gray-300 rounded-lg font-bold text-gray-400 text-sm hover:bg-blue-700 hover:text-white'>Evcil Hayvan</button>
             <button className='w-36 h-10 border-y border-x border-gray-300 rounded-lg font-bold text-gray-400 text-sm hover:bg-blue-700 hover:text-white'>Kitap</button>
             <button className='w-36 h-10 border-y border-x border-gray-300 rounded-lg font-bold text-gray-400 text-sm hover:bg-blue-700 hover:text-white'>Oyuncak</button>

@@ -37,11 +37,13 @@ export const dataSlice = createSlice({
     name:'data',
     initialState,
     reducers:{
-       
+       filterData: (state,action) => {
+        state.product = action.payload
+       }
     }
 
     }
 )
 
-export const {getListItem} = dataSlice.actions
+export const {filterData} = dataSlice.actions
 export default dataSlice.reducer
