@@ -1,19 +1,25 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 import {faBagShopping} from '@fortawesome/free-solid-svg-icons'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getData } from '../../redux/dataSlice'
+
 
 const Header = () => {
 
    const dispatch = useDispatch()
    const {product} = useSelector((state) => state.data)
-  const handlePage = (e) => {
+   const {basket} = useSelector((state) => state.data)
+
+   const handlePage = (e) => {
     const veri = e.target.value
    if(veri.length>2){
     const inputData = product.filter(item => item.name.toLocaleLowerCase().includes(veri.toLocaleLowerCase()))
     dispatch(getData(inputData))
+   }
+   else{
+    dispatch(getData(product))
    }
   }
 
@@ -30,9 +36,8 @@ const Header = () => {
         <div className='flex items-center justify-center  ml-10 bg-blue-600 rounded-3xl w-32 h-9 relative'>
             <FontAwesomeIcon  className='mr-2 text-white' icon={faBagShopping}></FontAwesomeIcon>
             <p className='text-white'>Sepetim</p>
-            <label className='absolute text-xs bg-red-500 text-white -top-2 right-0 w-5 h-5 text-center rounded-full '>2</label>
+            <label className='absolute text-xs bg-red-500 text-white -top-2 right-0 w-5 h-5 text-center rounded-full '>{basket.length}</label>
         </div>
-        
         </button>
     </div>
   )
