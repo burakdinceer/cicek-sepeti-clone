@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {  useDispatch, useSelector } from 'react-redux'
 import { addBasket } from '../../redux/dataSlice'
 
@@ -6,10 +6,15 @@ const ProductList = () => {
 
    const dispatch = useDispatch()
     const {product, fakeData} = useSelector((state) => state.data)
-  
+
     const handleBasket = (item) => {
       dispatch(addBasket(item))
+      
     }
+
+    
+   
+
   return (
     <div>
         

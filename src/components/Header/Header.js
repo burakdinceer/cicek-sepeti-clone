@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 import {faBagShopping} from '@fortawesome/free-solid-svg-icons'
-import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getData } from '../../redux/dataSlice'
 
